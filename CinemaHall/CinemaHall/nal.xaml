@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="CinemaHall.nal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CinemaHall"
+             mc:Ignorable="d" 
+             d:DesignHeight="561" d:DesignWidth="442">
+    <StackPanel Background="#FF222222" Loaded="StackPanel_Loaded">
+        <WrapPanel Margin="10,50,10,20" Height="38">
+            <Label Content="Стоимость билета: " Foreground="White" FontFamily="Microsoft YaHei UI Light" FontSize="18"/>
+            <Label Margin="10,0,0,0" x:Name="SummaBileta" Width="129" FontSize="18" Foreground="White" FontFamily="Microsoft YaHei UI Light" />
+        </WrapPanel>
+        <WrapPanel Margin="10,0,10,20" Height="45">
+            <Label Margin="0,0,30,0" Content="Внесенная сумма: " Foreground="White" FontFamily="Microsoft YaHei UI Light" FontSize="18"/>
+            <TextBox x:Name="vnes" Width="213" FontSize="18" Background="{x:Null}" Foreground="White" FontFamily="Microsoft YaHei UI Light" />
+        </WrapPanel>
+        <WrapPanel Margin="10,0,10,5" Height="38">
+            <Label Margin="0,0,30,0" Content="Выдать сдачу: " Foreground="White" FontFamily="Microsoft YaHei UI Light" FontSize="18"/>
+            <Label x:Name="sdacha" Width="208" FontSize="18" FontFamily="Microsoft YaHei UI Light" Foreground="White" />
+        </WrapPanel>
+        <Label x:Name="message" Margin="10" Foreground="Red" FontFamily="Microsoft YaHei UI Light" FontSize="18" Height="33" Width="404" FontWeight="Bold"/>
+
+        <Button Margin="0" Content="" Foreground="White" Background="#FF1725FF" FontWeight="Bold" Height="27" HorizontalAlignment="Center" Width="154"  FontFamily="Microsoft YaHei UI Light" Click="Button_Click"  >
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1" CornerRadius="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="Регистрация платежа"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </StackPanel>
+</UserControl>
